@@ -43,10 +43,12 @@ int main(int argc, char **argv) {
 void usage() {
     fprintf(stdout, "Usage: lapse [options...]\n"
                     "Options:\n"
-                    " -u <username>\tdesc\n"
-                    " -h <hostname>\tdesc\n"
-                    " -t <tty>\tdesc\n"
-                    " -h\tprint this help screen\n"
+                    " -u/--username <username>\tusername or login\n"
+                    " -h/--host <hostname>\thostname or IP\n"
+                    " -t/--tty <tty>\tdesc\n"
+                    " --utmp [/var/log/utmp]\tutmp file path\n"
+                    " --wtmp [/var/log/wtmp]\twtmp file path\n"
+                    " -h/--help\tprint this help screen\n"
     );
 }
 
