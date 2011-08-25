@@ -2,3 +2,4 @@ TODO file for "Lapse"
 
 - use getopt_long instead of getopt
 - add uptime modification function
+- add BSD and SUN systems

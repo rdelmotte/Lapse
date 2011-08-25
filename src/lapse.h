@@ -6,12 +6,12 @@
  *
  */
 
+#ifndef _LAPSE_H_
+#define _LAPSE_H_
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-
-#ifndef _LAPSE_H_
-#define _LAPSE_H_
 
 #define VERSION "0.1"
 
