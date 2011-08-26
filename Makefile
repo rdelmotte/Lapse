@@ -4,7 +4,7 @@
 # Copyright (c) 2011 LiveFyre. All rights reserved.
 #
 CC = gcc
-SRC = src/main.c
+SRC = src/main.c src/lastlog.c
 OUTNAME = lapse
 
 all:
