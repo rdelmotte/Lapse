@@ -13,6 +13,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+#ifdef HAVE_LASTLOG_H
+#include <lastlog.h>
+#endif
+
 #define VERSION "0.1"
 
 void usage();

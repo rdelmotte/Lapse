@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
     
     char arg;
     
-    while ((arg = getopt(argc, argv, "hi:n")) != EOF) {
+    while ((arg = getopt(argc, argv, "hi:nl")) != EOF) {
         switch (arg) {
             case 'h':
                 head();
@@ -27,6 +27,9 @@ int main(int argc, char **argv) {
                 printf("%s", optarg);
                 break;
             case 'n':
+                break;
+            case 'l':
+                lastlog();
                 break;
             case '?':
                 printf("???");
@@ -46,6 +49,7 @@ void usage() {
                     " -u/--username <username>\tusername or login\n"
                     " -h/--host <hostname>\thostname or IP\n"
                     " -t/--tty <tty>\tdesc\n"
+                    " -l/--lastlog\t"
                     " --utmp [/var/log/utmp]\tutmp file path\n"
                     " --wtmp [/var/log/wtmp]\twtmp file path\n"
                     " -h/--help\tprint this help screen\n"
