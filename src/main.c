@@ -13,7 +13,7 @@ struct global_args {
     char *username;
     char *hostname;
     char *tty;
-    char *ascii_file;
+    char *ascii;
     int utmp;
     int wtmp;
     int lastlog;
@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
     int opt_index = 0;
     
     global_args.username    = NULL;
-    global_args.hostname    = NULL
+    global_args.hostname    = NULL;
     global_args.tty         = NULL;
     global_args.ascii       = NULL;
     global_args.utmp        = UTMP_FILE;
