@@ -9,12 +9,12 @@
 #include "lapse.h"
 
 int main(int argc, char **argv) {
+    char arg;
+    
     if (geteuid() != 0) {
         fprintf(stderr, "You must be root to run this program!\n");
         return EXIT_FAILURE;
     }
-    
-    char arg;
     
     while ((arg = getopt(argc, argv, "hi:nl")) != EOF) {
         switch (arg) {
@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
             case 'n':
                 break;
             case 'l':
-                check_stat(_PATH_LASTLOG);
+                buf_stat(_PATH_LASTLOG);
                 break;
             case '?':
                 printf("???");
@@ -40,6 +40,7 @@ int main(int argc, char **argv) {
                 break;
         }
     }
+    
     return EXIT_SUCCESS;
 }
 
@@ -52,7 +53,7 @@ void usage() {
                     " -l/--lastlog\t"
                     " --utmp [/var/log/utmp]\tutmp file path\n"
                     " --wtmp [/var/log/wtmp]\twtmp file path\n"
-                    " -h/--help\tprint this help screen\n"
+                    " -h/--help\tshow this help screen and exit\n"
     );
 }
 

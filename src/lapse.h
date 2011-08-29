@@ -34,8 +34,8 @@
 
 void usage();
 void head();
-
-int check_stat(char *filename);
+int buf_stat(char *filename);
+int set_stat();
 int clean_lastlog(char *filename);
 
 #endif
