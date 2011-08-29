@@ -27,7 +27,7 @@ static const struct option long_opt[] = {
     { "utmp",       optional_argument,  NULL,           'b'},
     { "wtmp",       optional_argument,  NULL,           'w'},
     { "lastlog",    optional_argument,  NULL,           'l'},
-    { "debug",      no_argument,        &debug_flag,    0},
+    { "debug",      no_argument,        &debug_flag,    1},
     { "version",    no_argument,        NULL,           'V'},
     { "help",       no_argument,        NULL,           0},
     { NULL,         no_argument,        NULL,           0},
