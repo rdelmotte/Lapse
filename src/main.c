@@ -14,9 +14,9 @@ struct global_args {
     char *hostname;
     char *tty;
     char *ascii;
-    char utmp;
-    char wtmp;
-    char lastlog;
+    char *utmp;
+    char *wtmp;
+    char *lastlog;
 } global_args;
 static const char *opt_string = "u:h:t:a:bwlV?";
 static const struct option long_opt[] = {
