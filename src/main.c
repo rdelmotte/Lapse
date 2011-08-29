@@ -67,10 +67,16 @@ int main(int argc, char **argv) {
                 global_args.ascii = optarg;
                 break;
             case 'b':
+                if(optarg)
+                    global_args.utmp = optarg;
                 break;
             case 'w':
+                if(optarg)
+                    global_args.wtmp = optarg;
                 break;
             case 'l':
+                if(optarg)
+                    global_args.lastlog = optarg;
                 break;
             case 'V':
                 display_version();
