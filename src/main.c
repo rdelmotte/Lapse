@@ -14,9 +14,9 @@ struct global_args {
     char *hostname;
     char *tty;
     char *ascii;
-    int utmp;
-    int wtmp;
-    int lastlog;
+    char utmp;
+    char wtmp;
+    char lastlog;
 } global_args;
 static const char *opt_string = "u:h:t:a:bwlV?";
 static const struct option long_opt[] = {
@@ -24,9 +24,9 @@ static const struct option long_opt[] = {
     { "hostname",   required_argument,  NULL,           'h'},
     { "tty",        required_argument,  NULL,           't'},
     { "ascii",      required_argument,  NULL,           'a'},
-    { "utmp",       no_argument,        NULL,           'b'},
-    { "wtmp",       no_argument,        NULL,           'w'},
-    { "lastlog",    no_argument,        NULL,           'l'},
+    { "utmp",       optional_argument,  NULL,           'b'},
+    { "wtmp",       optional_argument,  NULL,           'w'},
+    { "lastlog",    optional_argument,  NULL,           'l'},
     { "debug",      no_argument,        &debug_flag,    0},
     { "version",    no_argument,        NULL,           'V'},
     { "help",       no_argument,        NULL,           0},
