@@ -1,10 +1,10 @@
 /*
- * Lapse - Log cleaning tool
- *
- * Created by Romain Delmotte on 2011-08-25.
- * Copyright (c) 2011 LiveFyre. All rights reserved.
- *
- */
+* Lapse - Log cleaning tool
+*
+* Created by Romain Delmotte on 2011-08-25.
+* Copyright (c) 2011. All rights reserved.
+*
+*/
 
 #ifndef _LAPSE_H_
 #define _LAPSE_H_
@@ -12,7 +12,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <lastlog.h>
 
 #ifndef UTMP_FILE
@@ -34,6 +35,7 @@
 void usage();
 void head();
 
+int check_stat(char *filename);
 int clean_lastlog(char *filename);
 
 #endif
