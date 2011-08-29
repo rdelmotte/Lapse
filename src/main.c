@@ -9,7 +9,6 @@
 #include "lapse.h"
 
 static int debug_flag;
-static const char *opt_string = "u:h:t:a:bwlV?";
 struct global_args {
     char *username;
     char *hostname;
@@ -36,6 +35,7 @@ static const struct option long_opt[] = {
 int main(int argc, char **argv) {
     int opt;
     int opt_index = 0;
+    static const char *opt_string = "u:h:t:a:bwlV?";
 
     if (geteuid() != 0) {
         fprintf(stderr, "You must be root to run this program!\n");
