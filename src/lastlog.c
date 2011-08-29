@@ -8,7 +8,17 @@
 
 #include "lapse.h"
 
-int lastlog(void) {
-    fprintf(stdout, "lastlog file path: %s\n", UTMP_FILE);
+int clean_lastlog(char *filename) {
+    struct lastlog ll;
+    int fd;
+    
+    if((fd = fopen(filename, "r+") == NULL) {
+        perror(filename);
+        return EXIT_FAILURE;
+    }
+    
+    
+    fclose(fd);
+
     return EXIT_SUCCESS;
 }

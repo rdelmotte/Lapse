@@ -15,11 +15,25 @@
 
 #include <lastlog.h>
 
+#ifndef UTMP_FILE
+#define UTMP_FILE "/var/run/utmp"
+#endif    
+
+#ifndef WTMP_FILE
+#define WTMP_FILE "/var/log/wtmp"
+#endif
+
+#ifndef _PATH_LASTLOG
+#define _PATH_LASTLOG "/var/log/lastlog"
+#endif
+
 #define VERSION "0.1"
+#define MESSAGES_FILE "/var/log/messages"
+#define SECURE_FILE "/var/log/auth.log"
 
 void usage();
 void head();
 
-int lastlog(void);
+int clean_lastlog(char *filename);
 
 #endif
