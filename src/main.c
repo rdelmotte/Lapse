@@ -1,10 +1,10 @@
 /*
- * Lapse - Log cleaning tool
- *
- * Created by Romain Delmotte on 2011-08-25.
- * Copyright (c) 2011 LiveFyre. All rights reserved.
- *
- */
+* Lapse - Log cleaning tool
+*
+* Created by Romain Delmotte on 2011-08-25.
+* Copyright (c) 2011. All rights reserved.
+*
+*/
 
 #include "lapse.h"
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
             case 'n':
                 break;
             case 'l':
-                lastlog();
+                check_stat(_PATH_LASTLOG);
                 break;
             case '?':
                 printf("???");

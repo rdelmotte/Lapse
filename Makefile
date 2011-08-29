@@ -1,7 +1,7 @@
 # Makefile "Lapse"
 #
 # Created by Romain Delmotte on 2011-08-25.
-# Copyright (c) 2011 LiveFyre. All rights reserved.
+# Copyright (c) 2011. All rights reserved.
 #
 CC = gcc
 SRC = src/main.c src/lastlog.c
