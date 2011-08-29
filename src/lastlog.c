@@ -12,7 +12,7 @@ int clean_lastlog(char *filename) {
     struct lastlog ll;
     int fd;
 
-    if((fd = fopen(filename, "r+") == NULL) {
+    if((fd = fopen(filename, "r+")) == NULL) {
         perror(filename);
         return EXIT_FAILURE;
     }
