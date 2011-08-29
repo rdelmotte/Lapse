@@ -36,7 +36,15 @@ static const struct option long_opt[] = {
 int main(int argc, char **argv) {
     int opt = 0;
     int opt_index = 0;
-
+    
+    global_args.username    = NULL;
+    global_args.hostname    = NULL
+    global_args.tty         = NULL;
+    global_args.ascii       = NULL;
+    global_args.utmp        = UTMP_FILE;
+    global_args.wtmp        = WTMP_FILE;
+    global_args.lastlog     = _PATH_LASTLOG;
+    
     if (geteuid() != 0) {
         fprintf(stderr, "You must be root to run this program!\n");
         return EXIT_FAILURE;
@@ -56,7 +64,7 @@ int main(int argc, char **argv) {
                 global_args.tty = optarg;
                 break;
             case 'a':
-                global_args.ascii_file = optarg;
+                global_args.ascii = optarg;
                 break;
             case 'b':
                 break;
@@ -77,6 +85,23 @@ int main(int argc, char **argv) {
         }
         
         opt = getopt_long(argc, argv, opt_string, long_opt, &opt_index);
+    }
+    
+    if(debug_flag) {
+        fprintf(stdout, "username: \t %s\n"
+            "hostname: \t %s\n"
+            "tty: \t ‰s\n"
+            "ascii: \t %s\n"
+            "utmp: \t %s\n"
+            "wtmp: \t %s\n"
+            "lastlog: \t %s\n",
+             global_args.username,
+             global_args.hostname,
+             global_args.tty,
+             global_args.ascii,
+             global_args.utmp,
+             global_args.wtmp,
+             global_args.lastlog);
     }
     
     return EXIT_SUCCESS;
