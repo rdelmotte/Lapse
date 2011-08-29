@@ -84,18 +84,19 @@ int main(int argc, char **argv) {
 
 
 void display_usage() {
-    fprintf(stdout, "Usage: lapse [options...]\n"
-        "Options:\n"
-        " -u --username <username>\tusername or login\n"
-        " -h --host <hostname>\thostname or IP\n"
-        " -t --tty <tty>\t\n"
-        " -a --ascii <filename>\t\n"
-        " -b --utmp\tutmp file path\n"
-        " -w --wtmp\twtmp file path\n"
-        " -l --lastlog\t\n"
-        " --debug\tactive debug mode\n"
-        " -V --version\tprint lapse version\n"
-        " --help\tshow this help screen and exit\n"
+    fprintf(stdout, "Usage: lapse [OPTIONS]...\n"
+        " -u, --username <username> \t username or login\n"
+        " -h, --host <hostname> \t hostname or IP\n"
+        " -t, --tty <tty> \t \n"
+        "\n"
+        " -a, --ascii <filename> \t \n"
+        " -b, --utmp \t utmp file path\n"
+        " -w, --wtmp \t wtmp file path\n"
+        " -l, --lastlog \t \n"
+        "\n"
+        " --debug \t active debug mode\n"
+        " -V, --version \t print lapse version\n"
+        " --help \t show this help screen and exit\n"
         );
 }
 
