@@ -18,6 +18,7 @@ struct global_args {
     int wtmp;
     int lastlog;
 } global_args;
+static const char *opt_string = "u:h:t:a:bwlV?";
 static const struct option long_opt[] = {
     { "username",   required_argument,  NULL,           'u'},
     { "hostname",   required_argument,  NULL,           'h'},
@@ -33,9 +34,8 @@ static const struct option long_opt[] = {
 };
 
 int main(int argc, char **argv) {
-    int opt;
+    int opt = 0;
     int opt_index = 0;
-    static const char *opt_string = "u:h:t:a:bwlV?";
 
     if (geteuid() != 0) {
         fprintf(stderr, "You must be root to run this program!\n");
@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
                 break;
         }
         
-        opt = getopt_long(argc, argv, opt_sting, long_opt, &opt_index);
+        opt = getopt_long(argc, argv, opt_string, long_opt, &opt_index);
     }
     
     return EXIT_SUCCESS;
