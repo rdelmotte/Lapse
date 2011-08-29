@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
         return EXIT_FAILURE;
     }
 
-    opt = getopt_long(argc, argv, opt_sting, long_opt, &opt_index);
+    opt = getopt_long(argc, argv, opt_string, long_opt, &opt_index);
     
     while(opt != -1){
         switch(opt) {
