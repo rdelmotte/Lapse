@@ -4,3 +4,4 @@ TODO file for "Lapse"
 - add uptime modification function
 - add BSD and SUN systems
 - add 'sum' handling http://home.nvg.org/~asparges/HAU/System/rootkit/fix.c
+- debug mode

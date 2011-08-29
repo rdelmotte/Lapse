@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <getopt.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <lastlog.h>
@@ -32,8 +33,9 @@
 #define MESSAGES_FILE "/var/log/messages"
 #define SECURE_FILE "/var/log/auth.log"
 
-void usage();
-void head();
+void display_header();
+void display_usage();
+void display_version();
 int buf_stat(char *filename);
 int set_stat();
 int clean_lastlog(char *filename);
