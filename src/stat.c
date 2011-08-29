@@ -6,6 +6,8 @@
 *
 */
 
+#include "lapse.h"
+
 int check_stat(char *filename) {
     struct stat sb;
 
