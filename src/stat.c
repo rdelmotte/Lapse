@@ -79,5 +79,5 @@ return EXIT_FAILURE;
 }
 settimeofday(&otime,&tzp);*/
 
-    return EXIT_SUCESS;
+    return EXIT_SUCCESS;
 }
