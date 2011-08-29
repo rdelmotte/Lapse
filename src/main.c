@@ -54,18 +54,10 @@ int main(int argc, char **argv) {
     
     while(opt != -1){
         switch(opt) {
-            case 'u':
-                global_args.username = optarg;
-                break;
-            case 'h':
-                global_args.hostname = optarg;
-                break;
-            case 't':
-                global_args.tty = optarg;
-                break;
-            case 'a':
-                global_args.ascii = optarg;
-                break;
+            case 'u': global_args.username = optarg; break;
+            case 'h': global_args.hostname = optarg; break;
+            case 't': global_args.tty = optarg; break;
+            case 'a': global_args.ascii = optarg; break;
             case 'b':
                 if(optarg)
                     global_args.utmp = optarg;
@@ -122,8 +114,11 @@ void display_usage() {
         "\n"
         " -a, --ascii=path \t \n"
         " -b, --utmp[=PATH] \t utmp file path\n"
+        "                   \t\t(default=auto detection)\n"
         " -w, --wtmp[=PATH] \t wtmp file path\n"
+        "                   \t\t(default=auto detection)\n"
         " -l, --lastlog[=PATH] \t \n"
+        "                   \t\t(default=auto detection)\n"
         "\n"
         " --debug \t active debug mode\n"
         " -V, --version \t print lapse version\n"

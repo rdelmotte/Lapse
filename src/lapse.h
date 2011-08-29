@@ -15,6 +15,7 @@
 #include <getopt.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <utmp.h>
 #include <lastlog.h>
 
 #ifndef UTMP_FILE
