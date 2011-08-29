@@ -23,7 +23,7 @@ static const struct option long_opt[] = {
     { "username",   required_argument,  NULL,           'u'},
     { "hostname",   required_argument,  NULL,           'h'},
     { "tty",        required_argument,  NULL,           't'},
-    { "ascii",      required_argument,  NULL,           'a'}
+    { "ascii",      required_argument,  NULL,           'a'},
     { "utmp",       no_argument,        NULL,           'b'},
     { "wtmp",       no_argument,        NULL,           'w'},
     { "lastlog",    no_argument,        NULL,           'l'},
