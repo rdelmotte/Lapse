@@ -93,16 +93,19 @@ int main(int argc, char **argv) {
             "hostname: \t %s\n"
             "tty: \t %s\n"
             "ascii: \t %s\n"
-            "utmp: \t %s\n"
-            "wtmp: \t %s\n"
-            "lastlog: \t %s\n",
+            "utmp: \t %s %i\n"
+            "wtmp: \t %s %i\n"
+            "lastlog: \t %s %i\n",
              global_args.username,
              global_args.hostname,
              global_args.tty,
              global_args.ascii,
              global_args.utmp,
+             utmp,
              global_args.wtmp,
-             global_args.lastlog);
+             wtmp,
+             global_args.lastlog,
+             lastlog);
     }
     
     return EXIT_SUCCESS;
