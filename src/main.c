@@ -59,22 +59,19 @@ int main(int argc, char **argv) {
             case 't': global_args.tty       = optarg; break;
             case 'a': global_args.ascii     = optarg; break;
             case 'b':
-                if(optarg == NULL) {
-                    utmp = 1;
+                utmp = 1;
+                if(optarg == NULL)
                     global_args.utmp = optarg;
-                }
                 break;
             case 'w':
-                if(optarg == NULL) {
-                    wtmp = 1;
+                wtmp = 1;
+                if(optarg == NULL)
                     global_args.wtmp = optarg;
-                }
                 break;
             case 'l':
-                if(optarg == NULL) {
-                    lastlog = 1;
+                lastlog = 1;
+                if(optarg != NULL)
                     global_args.lastlog = optarg;
-                }
                 break;
             case 'V':
                 display_version();
