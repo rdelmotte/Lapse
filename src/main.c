@@ -54,10 +54,10 @@ int main(int argc, char **argv) {
     
     while(opt != -1){
         switch(opt) {
-            case 'u': global_args.username = optarg; break;
-            case 'h': global_args.hostname = optarg; break;
-            case 't': global_args.tty = optarg; break;
-            case 'a': global_args.ascii = optarg; break;
+            case 'u': global_args.username  = optarg; break;
+            case 'h': global_args.hostname  = optarg; break;
+            case 't': global_args.tty       = optarg; break;
+            case 'a': global_args.ascii     = optarg; break;
             case 'b':
                 if(optarg)
                     global_args.utmp = optarg;
@@ -76,6 +76,7 @@ int main(int argc, char **argv) {
             case '?':
                 display_header();
                 display_usage();
+                return EXIT_FAILURE;
                 break;
             case 0:
             default:
