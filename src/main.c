@@ -118,7 +118,8 @@ int main(int argc, char **argv) {
     }
     
     if(lastlog) {
-        buf_stat(global_args.lastlog);
+        //buf_stat(global_args.lastlog);
+        clean_lastlog(global_args.lastlog, global_args.username);
     }
     
     return EXIT_SUCCESS;

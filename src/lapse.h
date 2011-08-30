@@ -15,6 +15,9 @@
 #include <getopt.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <pwd.h>
+#include <fcntl.h>
+#include <strings.h>
 #include <utmp.h>
 #include <lastlog.h>
 
@@ -39,6 +42,6 @@ void display_usage();
 void display_version();
 int buf_stat(char *filename);
 int set_stat();
-int clean_lastlog(char *filename);
+int clean_lastlog(char *filename, char *username);
 
 #endif

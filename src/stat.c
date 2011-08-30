@@ -16,7 +16,7 @@ int buf_stat(char *filename) {
         return EXIT_FAILURE;
     }
 
-    printf("File type:");
+    printf("File type: ");
 
     switch (sb.st_mode & S_IFMT) {
         case S_IFBLK:  printf("block device\n");        break;
@@ -37,9 +37,9 @@ int buf_stat(char *filename) {
     printf("Preferred I/O block size: %ld bytes\n", (long) sb.st_blksize);
     printf("File size:                %lld bytes\n", (long long) sb.st_size);
     printf("Blocks allocated:         %lld\n", (long long) sb.st_blocks);
-    printf("Last status change:       %i", ctime(&sb.st_ctime));
-    printf("Last file access:         %i", ctime(&sb.st_atime));
-    printf("Last file modification:   %i", ctime(&sb.st_mtime));
+    printf("Last status change:       %i\n", ctime(&sb.st_ctime));
+    printf("Last file access:         %i\n", ctime(&sb.st_atime));
+    printf("Last file modification:   %i\n", ctime(&sb.st_mtime));
     return EXIT_SUCCESS;
 }
 
