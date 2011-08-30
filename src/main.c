@@ -88,7 +88,7 @@ int main(int argc, char **argv) {
         opt = getopt_long(argc, argv, opt_string, long_opt, &opt_index);
     }
     
-    if(debug_flag) {
+    if(debug) {
         fprintf(stdout, "username: \t %s\n"
             "hostname: \t %s\n"
             "tty: \t %s\n"
