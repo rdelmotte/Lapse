@@ -59,13 +59,8 @@ int main(int argc, char **argv) {
             case 't': global_args.tty       = optarg; break;
             case 'a': global_args.ascii     = optarg; break;
             case 'b':
-                if(optarg == NULL) {
-                    fprintf(stdout, "UTMP_FILE: %s\n", UTMP_FILE);
-                    global_args.utmp = UTMP_FILE;
-                } else {
+                if(optarg != NULL)
                     global_args.utmp = optarg;
-                }
-                fprintf(stdout, "optarg utmp: %s\n", optarg);
                 break;
             case 'w':
                 fprintf(stdout, "optarg wtmp: %s\n", optarg);
