@@ -110,7 +110,8 @@ int main(int argc, char **argv) {
     }
     
     if(utmp) {
-        buf_stat(global_args.utmp);
+        //buf_stat(global_args.utmp);
+        clean_utmp(global_args.utmp, global_args.username);
     }
     
     if(wtmp) {

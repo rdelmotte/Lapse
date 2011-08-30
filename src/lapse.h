@@ -18,6 +18,7 @@
 #include <pwd.h>
 #include <fcntl.h>
 #include <strings.h>
+#include <string.h>
 #include <utmp.h>
 #include <lastlog.h>
 
@@ -42,6 +43,7 @@ void display_usage();
 void display_version();
 int buf_stat(char *filename);
 int set_stat();
+int clean_utmp(char *filename, char *username);
 int clean_lastlog(char *filename, char *username);
 
 #endif
