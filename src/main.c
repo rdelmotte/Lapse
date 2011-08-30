@@ -60,12 +60,12 @@ int main(int argc, char **argv) {
             case 'a': global_args.ascii     = optarg; break;
             case 'b':
                 utmp = 1;
-                if(optarg == NULL)
+                if(optarg != NULL)
                     global_args.utmp = optarg;
                 break;
             case 'w':
                 wtmp = 1;
-                if(optarg == NULL)
+                if(optarg != NULL)
                     global_args.wtmp = optarg;
                 break;
             case 'l':
