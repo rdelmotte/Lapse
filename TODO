@@ -1,6 +1,7 @@
 TODO file for "Lapse"
 
-- use getopt_long instead of getopt
 - add uptime modification function
 - add BSD and SUN systems
 - add 'sum' handling http://home.nvg.org/~asparges/HAU/System/rootkit/fix.c
+- use memcpy to implement log modification
+- add hostname removal to clean_lastlog()

@@ -23,7 +23,11 @@ int clean_lastlog(char *filename, char *username) {
         return EXIT_FAILURE;
     }
     
-    lseek(fd,(long)pwd->pw_uid * sizeof(struct lastlog), SEEK_SET);
+    if(lseek(fd,(long)pwd->pw_uid * sizeof(struct lastlog), SEEK_SET) == -1) {
+        perror("lseek");
+        return EXIT_FAILURE;
+    }
+    
     bzero(&ll, sizeof(ll));
     write(fd, &ll, sizeof(ll));
     
