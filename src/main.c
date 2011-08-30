@@ -132,5 +132,5 @@ void display_header() {
 }
 
 void display_version() {
-    fprintf(stdout, "lapse %s", VERSION);
+    fprintf(stdout, "lapse %s\n", VERSION);
 }
