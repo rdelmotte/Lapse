@@ -60,6 +60,7 @@ int main(int argc, char **argv) {
             case 'a': global_args.ascii     = optarg; break;
             case 'b':
                 if(optarg == NULL) {
+                    fprintf(stdout, "UTMP_FILE: %s\n", UTMP_FILE);
                     global_args.utmp = UTMP_FILE;
                 } else {
                     global_args.utmp = optarg;
