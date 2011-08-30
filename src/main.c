@@ -60,17 +60,17 @@ int main(int argc, char **argv) {
             case 'a': global_args.ascii     = optarg; break;
             case 'b':
                 fprintf(stdout, "optarg utmp: %s\n", optarg);
-                if(optarg)
+                if(optarg != NULL)
                     global_args.utmp = optarg;
                 break;
             case 'w':
                 fprintf(stdout, "optarg wtmp: %s\n", optarg);
-                if(optarg)
+                if(optarg != NULL)
                     global_args.wtmp = optarg;
                 break;
             case 'l':
                 fprintf(stdout, "optarg lastlog: %s\n", optarg);
-                if(optarg)
+                if(optarg != NULL)
                     global_args.lastlog = optarg;
                 break;
             case 'V':
