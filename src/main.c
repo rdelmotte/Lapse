@@ -109,6 +109,18 @@ int main(int argc, char **argv) {
              lastlog);
     }
     
+    if(utmp) {
+        buf_stat(global_args.utmp);
+    }
+    
+    if(wtmp) {
+        buf_stat(global_args.wtmp);
+    }
+    
+    if(lastlog) {
+        buf_stat(global_args.lastlog);
+    }
+    
     return EXIT_SUCCESS;
 }
 
