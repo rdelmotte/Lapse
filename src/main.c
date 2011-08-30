@@ -8,7 +8,7 @@
 
 #include "lapse.h"
 
-static int debug_flag;
+static int utmp, wtmp, lastlog, debug;
 struct global_args {
     char *username;
     char *hostname;
@@ -24,10 +24,10 @@ static const struct option long_opt[] = {
     { "hostname",   required_argument,  NULL,           'h'},
     { "tty",        required_argument,  NULL,           't'},
     { "ascii",      required_argument,  NULL,           'a'},
-    { "utmp",       optional_argument,  NULL,           'b'},
-    { "wtmp",       optional_argument,  NULL,           'w'},
-    { "lastlog",    optional_argument,  NULL,           'l'},
-    { "debug",      no_argument,        &debug_flag,    1},
+    { "utmp",       optional_argument,  &utmp,          'b'},
+    { "wtmp",       optional_argument,  &wtmp,          'w'},
+    { "lastlog",    optional_argument,  &lastlog,       'l'},
+    { "debug",      no_argument,        &debug,         1},
     { "version",    no_argument,        NULL,           'V'},
     { "help",       no_argument,        NULL,           0},
     { NULL,         no_argument,        NULL,           0},
