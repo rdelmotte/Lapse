@@ -115,12 +115,14 @@ int main(int argc, char **argv) {
     }
     
     if(wtmp) {
-        buf_stat(global_args.wtmp);
+        //buf_stat(global_args.wtmp);
     }
     
     if(lastlog) {
-        //buf_stat(global_args.lastlog);
+        struct stat st;
+        buf_stat(global_args.lastlog, &st);
         clean_lastlog(global_args.lastlog, global_args.username);
+        set_stat(global_args.lastlog, &st);
     }
     
     return EXIT_SUCCESS;
@@ -138,7 +140,7 @@ void display_usage() {
         "                   \t   (default=auto detection)\n"
         " -w, --wtmp[=PATH] \t wtmp file path\n"
         "                   \t   (default=auto detection)\n"
-        " -l, --lastlog[=PATH] \t \n"
+        " -l, --lastlog[=PATH] \t clean lastlog, mandatody username\n"
         "                   \t   (default=auto detection)\n"
         "\n"
         " --debug \t active debug mode\n"

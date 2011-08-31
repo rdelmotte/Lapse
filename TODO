@@ -5,3 +5,5 @@ TODO file for "Lapse"
 - add 'sum' handling http://home.nvg.org/~asparges/HAU/System/rootkit/fix.c
 - use memcpy to implement log modification
 - add hostname removal to clean_lastlog()
+- stat: get microseconds working with utimes()
+- stat: handle ctime
