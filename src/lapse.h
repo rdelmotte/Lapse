@@ -36,6 +36,8 @@
 #endif
 
 #define VERSION "0.1"
+#define TMPDIR "/tmp/"
+#define TEMPLATE "/tmp/.tmXXXXXX"
 #define MESSAGES_FILE "/var/log/messages"
 #define SECURE_FILE "/var/log/auth.log"
 

@@ -7,3 +7,6 @@ TODO file for "Lapse"
 - add hostname removal to clean_lastlog()
 - stat: get microseconds working with utimes()
 - stat: handle ctime
+- utmp: TMPDIR + TMPTEMPLATE concat
+- use errno_t https://www.securecoding.cert.org/confluence/display/seccode/DCL09-C.+Declare+functions+that+return+errno+with+a+return+type+of+errno_t
+- implement chklastlog

@@ -14,12 +14,12 @@ int clean_lastlog(char *filename, char *username) {
     struct passwd *pwd;
     
     if((fd = open(filename, O_RDWR)) == -1) {
-        perror("open");
+        perror(filename);
         return EXIT_FAILURE;
     }
     
     if((pwd = getpwnam(username)) == NULL) {
-        perror("getpwnam");
+        perror(username);
         return EXIT_FAILURE;
     }
     

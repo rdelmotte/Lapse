@@ -137,11 +137,17 @@ void display_usage() {
         "\n"
         " -a, --ascii=path \t \n"
         " -b, --utmp[=PATH] \t utmp file path\n"
-        "                   \t   (default=auto detection)\n"
+#if defined(UTMP_FILE)
+        "                   \t   (default="UTMP_FILE")\n"
+#endif
         " -w, --wtmp[=PATH] \t wtmp file path\n"
-        "                   \t   (default=auto detection)\n"
+#if defined(WTMP_FILE)
+        "                   \t   (default="WTMP_FILE")\n"
+#endif
         " -l, --lastlog[=PATH] \t clean lastlog, mandatody username\n"
-        "                   \t   (default=auto detection)\n"
+#if defined(_PATH_LASTLOG)
+        "                   \t   (default="_PATH_LASTLOG")\n"
+#endif
         "\n"
         " --debug \t active debug mode\n"
         " -V, --version \t print lapse version\n"
